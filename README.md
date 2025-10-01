@@ -8,6 +8,21 @@ SQLite (DBeaver) for data cleaning & SQL queries · Power BI for the dashboard
 
 ---
 
+## Structure
+heart-disease-sql-powerbi/
+├─ README.md
+├─ data/
+│  ├─ heart.db
+│  └─ DATA_SOURCE.md
+├─ sql/
+│  └─ queries_sqlite_heart_disease.sql
+└─ powerbi/
+   ├─ Project_Clinical _Heart _Disease.pbix
+   ├─ dashboard.png
+   └─ dashboard.gif
+
+---
+
 ## Data
 - Source: Kaggle — Heart Disease Dataset  
   https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset  
@@ -40,6 +55,21 @@ Go to powerbi folder
 ## Reproduce
 - **SQL:** open `sql/queries_sqlite_heart_disease.sql` in DBeaver (SQLite).  
 - **Power BI:** connect to your local `heart.db` via ODBC (or rebuild from the SQL steps).
+
+## How to open the report
+
+- Open **powerbi/Project_Clinical _Heart _Disease.pbix** in Power BI Desktop.
+- If you see a connection error (ODBC/SQLite), set the DSN once:
+  1) Windows → **ODBC Data Sources (64-bit)** → **System DSN** → **Add…**  
+  2) Choose **SQLite3 ODBC Driver**, name it **HeartDB**, and point **Database** to this repo’s `data/heart.db`.
+  3) Back in Power BI: **Transform data → Data source settings → Change Source** → pick the **HeartDB** DSN.
+
+> The repository includes both the SQLite database (`data/heart.db`) and the Power BI report (`powerbi/Project_Clinical _Heart _Disease.pbix`).
+
+
+**Reproducibility**
+- SQL script: `sql/queries_sqlite_heart_disease.sql` creates the cleaned `heart` table (302 unique patients) from the raw import (`heart_raw`).
+- Dashboard: single page with KPIs and clinical visuals; slicers for Age Group, Gender, and Exercise-induced Angina.
 
 **Note**  
 Exploratory analytics for learning. Not diagnostic or medical advice.
