@@ -1,0 +1,15 @@
+# Data Source
+
+- Kaggle: Heart Disease Dataset  
+  https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset
+
+- Origin: UCI Heart Disease datasets (Cleveland, Hungary, Switzerland, Long Beach V, 1988).
+
+- Notes:
+  - The Kaggle file contains many exact duplicates.
+  - After cleaning in SQLite, the analytic table `heart` has **302 unique patients**.
+  - Variable meanings include: `sex (1=male, 0=female)`, `cp` chest pain types (0–3),
+    `trestbps` resting BP, `chol` cholesterol (mg/dl), `exang` exercise-induced angina (1=yes),
+    `oldpeak` ST depression, `target` (1=disease, 0=no disease).
+
+- License: See the dataset page on Kaggle.
