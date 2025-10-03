@@ -18,8 +18,9 @@ heart-disease-sql-powerbi/
 │  └─ queries_sqlite_heart_disease.sql
 └─ powerbi/
    ├─ Project_Clinical _Heart _Disease.pbix
-   ├─ dashboard.png
-   └─ dashboard.gif
+   ├─ Project_Clinical _Heart _Disease.png
+   ├─ Project_Clinical _Heart _Disease_Slicers.png
+   └─ Project_Clinical _Heart _Disease_Slicers.gif
 
 ---
 
@@ -71,5 +72,8 @@ Go to powerbi folder
 - SQL script: `sql/queries_sqlite_heart_disease.sql` creates the cleaned `heart` table (302 unique patients) from the raw import (`heart_raw`).
 - Dashboard: single page with KPIs and clinical visuals; slicers for Age Group, Gender, and Exercise-induced Angina.
 
-**Note**  
-Exploratory analytics for learning. Not diagnostic or medical advice.
+## Data Quality & Limitations
+- Public mirrors of this dataset include numerous exact duplicates and minor coding inconsistencies.
+- I deduplicated and typed the data in SQLite; the final analytic table contains **302 unique patients**.
+- The cohort is small and historical (1988 origins), so it is not representative of today’s populations.
+- This repository is intended for learning and portfolio demonstration only—not for diagnosis or medical use.
