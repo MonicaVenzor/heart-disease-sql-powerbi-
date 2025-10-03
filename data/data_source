@@ -13,3 +13,5 @@
     `oldpeak` ST depression, `target` (1=disease, 0=no disease).
 
 - License: See the dataset page on Kaggle.
+
+** This repository includes a lightweight SQLite file (`data/heart.db`) with the cleaned table `heart` used by the Power BI report. **
